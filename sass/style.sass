@@ -1,0 +1,155 @@
+// color varient
+$primary: #e36556
+$secondary: #62b951
+$tertiary: #e3db56
+$default: #969ea3
+$black: #3c3d48
+$white: #fff
+$bg-color: #e5e5e5
+
+
+// mixin
+=size($w, $h: $w)
+    width: $w
+    height: $h
+
+// extend
+%clearfix
+    &::after
+        content: ''
+        display: block
+        clear: both
+
+%wrapper
+    margin:
+        left: auto
+        right: auto
+    width: 940px
+
+%text-hidden
+    overflow: hidden
+    text-indent: -9999em
+    line-height: 9999em
+    font-size: 1px
+
+//import
+@import _element
+
+
+body
+    min-width: 940px
+    font-family: 'Montserrat', Sans-serif
+    background-color: $bg-color
+    color: $black
+a 
+    text-decoration: none
+    color: inherit
+
+.wrapper
+    @extend %wrapper
+    @extend %clearfix
+.header
+    background-color: $white
+.header-top
+    position: relative
+    padding: 40px 0 38px
+    border-bottom: 1px solid $bg-color
+    font-size: 11px
+    letter-spacing: 2px
+    .logo
+        position: absolute
+        left: 50%
+        top: 40px
+        transform: translateX(-50%)
+        a 
+            padding: 10px
+            height: 18px
+.customer-tel
+    padding: 
+        left: 26px
+    background: url("../svg/icon/support.svg") no-repeat 0
+    p 
+        line-height: 1.7
+.local-nav
+    float: right
+    margin-top: -5px
+    text-align: right
+    button[class*="change-"]
+        font: inherit
+        padding: 10px 14px 10px 10px
+        letter-spacing: inherit
+        background: url("../img/select-red.png") no-repeat right
+    .header-addcart
+        @extend %text-hidden
+        display: inline-block
+        padding: 10px
+        +size(12px, 16px)
+        background: url("../svg/icon/addbag.svg") no-repeat 10px 7px
+        vertical-align: top
+    .header-login
+        padding: 10px 10px 10px 22px
+        background: url("../svg/icon/login.svg") no-repeat 0
+        color: $default
+        text-transform: uppercase
+.header-bottom
+    padding: 20px 0 19px
+.main-menu-wrapper
+    @extend %clearfix
+.main-menu-list
+    float: left
+    margin: 0 4px
+    letter-spacing: 2px
+    font-size: 11px
+    text-transform: uppercase
+    a 
+        display: inline-block
+        padding: 10px 15px
+        &.select
+            background: url("../img/select-red.png") no-repeat right
+        &:hover,&:focus
+            color: $primary
+    &:first-child
+        margin-left: 0
+        a 
+            padding-left: 0
+    &:last-child
+        margin-right: 0
+        a 
+            padding-right: 0
+.main-carousel 
+    overflow: hidden
+    +size(100%, 583px)
+    background-image: linear-gradient(180deg, #ededed, #f1f1f1)
+    position: relative
+    img
+        position: absolute
+        left: 52%
+        top: 0
+    p
+        padding-top: 200px
+        width: 600px
+        font-family: 'PT Serif', serif
+        font-size: 30px
+        letter-spacing: 10px
+        color: #b0b1b7
+        font-style: italic
+        text-align: center
+        line-height: 0.95
+    .main-text
+        display: block
+        font-family: 'Montserrat', Sans-serif
+        font-size: 112px
+        font-weight: 700
+        letter-spacing: 20px
+        font-style: normal
+        color: $black
+.carousel-indicator
+    position: absolute
+    bottom: 36px
+    left: 50%
+    transform: translateX(-50%)
+    z-index: 100
+    @extend %clearfix
+    li 
+        float: left
+        margin-right: 20px
