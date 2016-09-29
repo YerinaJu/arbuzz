@@ -142,13 +142,13 @@ span[class*="label-"] {
 
 .slider-btn {
   vertical-align: middle;
-  background: url("../svg/button/slider-dot.svg"); }
+  background: url("../svg/button/Slider-dot.svg"); }
   .slider-btn.lg {
-    background: url("../svg/button/slider-dot-lg.svg"); }
+    background: url("../svg/button/Slider-dot-lg.svg"); }
   .slider-btn.on {
     width: 11px;
     height: 11px;
-    background: url("../svg/button/slider-dot-on.svg"); }
+    background: url("../svg/button/Slider-dot-on.svg"); }
 
 /* icon */
 a[class*="sns-round"] {
