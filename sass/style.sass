@@ -252,6 +252,7 @@ img
 
 .product-wrapper
     margin-top: 20px
+    @extend %clearfix
     .products-item
         position: relative
         overflow: hidden
@@ -264,6 +265,8 @@ img
                 opacity: 0.5
             .add-buttons
                 display: block
+            span[class*="label-"]
+                opacity: 0.5
         .add-buttons
             display: none
             position: absolute
@@ -292,10 +295,10 @@ img
                     top: 14px
                 color: #fff
     span[class*="label-"]
+        // display: none
         position: absolute
         right: 0
         top: 0
-
     .products-caption
         padding:
             top: 20px
@@ -312,4 +315,40 @@ img
         .non-sale
             font-size: 12px
             color: #c6c6c6
-    
+
+.about-us
+    margin-top: 26px
+    padding:
+        top: 40px
+        left: 60px
+        right: 60px
+        bottom: 40px
+    background-color: $white
+    .default-btn
+        margin-left: 50%
+        margin-top: 32px
+        transform: translateX(-50%)
+
+.main-paragragh
+    font-family: 'PT Serif', serif
+    text-align: left
+    font-size: 15px
+    line-height: 1.74
+    letter-spacing: 0.1px
+h2
+    margin-bottom: 30px
+    font-weight: bold
+    font-size: 40px
+    text-transform: uppercase
+    text-align: center
+
+.from-the-blog
+    margin-top: 43px
+    .blog-wrapper
+        margin-top: 20px
+        .blog-items
+            margin-right: 20px
+            background-color: $white
+            border-radius: 5px
+            &:last-child
+                margin-right: 0
