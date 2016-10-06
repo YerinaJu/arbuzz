@@ -36,6 +36,12 @@ $bg-color: #e5e5e5
 //import
 @import _element
 
+h2
+    margin-bottom: 30px
+    font-weight: bold
+    font-size: 40px
+    text-transform: uppercase
+    text-align: center
 
 body
     min-width: 940px
@@ -127,7 +133,6 @@ img
     +size(100%, 583px)
     margin: 0 auto
     background-image: linear-gradient(180deg, #ededed, #f1f1f1)
-
 .carousel-container
     @extend %wrapper
     @extend %clearfix
@@ -157,7 +162,7 @@ img
             display: block
             font-family: 'Montserrat', Sans-serif
             font-size: 112px
-            font-weight: 700
+            font-weight: 900
             letter-spacing: 20px
             font-style: normal
             color: $black
@@ -326,29 +331,89 @@ img
     background-color: $white
     .default-btn
         margin-left: 50%
-        margin-top: 32px
+        margin-top: 30px
         transform: translateX(-50%)
-
-.main-paragragh
-    font-family: 'PT Serif', serif
-    text-align: left
-    font-size: 15px
-    line-height: 1.74
-    letter-spacing: 0.1px
-h2
-    margin-bottom: 30px
-    font-weight: bold
-    font-size: 40px
-    text-transform: uppercase
-    text-align: center
+    .main-paragragh
+        font-family: 'PT Serif', serif
+        text-align: left
+        font-size: 15px    
+        letter-spacing: 0.1px
+        margin-top: -5px
+        line-height: 2
 
 .from-the-blog
     margin-top: 43px
     .blog-wrapper
-        margin-top: 20px
+        margin-top: 21px
+        @extend %clearfix
         .blog-items
+            overflow: hidden
             margin-right: 20px
             background-color: $white
             border-radius: 5px
-            &:last-child
+            box-sizing: border-box
+            .inner-wrapper
+                padding: 27px 30px 0
+                height: 220px
+            .tag
+                margin-left: -15px
+            &:nth-child(2)
+                background: url("../img/blog_bg1.jpg") no-repeat
+                    size: cover
+                color: $white
+                .tag
+                    margin:
+                        top: 10px
+                        left: 0
+            &.another
                 margin-right: 0
+                background: url("../img/blog_bg2.jpg") no-repeat
+                    size: cover
+                color: $white
+                .blog-title
+                    margin-top: 96px
+            .blog-title
+                display: block
+                margin:
+                    top: 25px
+                    bottom: 13px
+                font-size: 20px
+                text-align: left
+                line-height: 1.2
+            .blog-paragragh
+                font-family: 'PT Serif', serif
+                font-size: 14px    
+                text-align: left
+                line-height: 1.43
+            .times, .comments, .writer
+                font-size: 11px
+                box-sizing: border-box
+            .times, .comments
+                margin:
+                    left: 30px
+                    top: 25px
+                padding:
+                    left: 27px  
+                    top: 5px   
+                height: 28px               
+            .times
+                background: url("../svg/icon/time.svg") no-repeat
+                color: #adaeb4
+            .comments
+                background: url("../svg/icon/comment.svg") no-repeat
+            .writer
+                height: 53px
+                padding:
+                    left: 27px
+                    top: 10px
+                background-color: $white
+                color: $black
+                font-weight: bold
+                img 
+                    margin-right: 10px
+
+.footer
+    margin-top: 20px
+    background-color: $white
+    .footer-bottom
+        border-top: 1px solid $bg-color
