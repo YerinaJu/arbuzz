@@ -217,7 +217,7 @@ a {
   color: inherit; }
 
 img {
-  vertical-align: bottom; }
+  vertical-align: middle; }
 
 .header {
   background-color: #fff; }
@@ -341,47 +341,48 @@ img {
     float: left;
     margin-right: 20px; }
 
-.banner-wrapper .banner-wrap-left {
-  float: left;
-  margin-right: 20px; }
-  .banner-wrapper .banner-wrap-left .banner {
-    height: 300px; }
-
-.banner-wrapper .banner {
-  overflow: hidden;
-  height: 620px;
-  margin-top: 17px;
-  border-radius: 5px;
-  letter-spacing: 1px; }
-  .banner-wrapper .banner:first-child {
+.banner-wrapper {
+  background-color: #e5e5e5; }
+  .banner-wrapper .banner-wrap-left {
+    float: left;
     margin-right: 20px; }
-  .banner-wrapper .banner.last {
-    margin-top: 20px; }
-  .banner-wrapper .banner [class*="banner-text-"] {
-    text-align: center;
-    line-height: 1.24; }
-    .banner-wrapper .banner [class*="banner-text-"] strong {
-      font-size: 30px;
-      font-weight: 700;
-      text-transform: uppercase; }
-    .banner-wrapper .banner [class*="banner-text-"] em {
-      font-size: 15px;
-      font-family: 'PT Serif', serif;
-      color: #5b5d69;
-      font-style: italic; }
-    .banner-wrapper .banner [class*="banner-text-"] button {
-      margin-top: 10px; }
-  .banner-wrapper .banner .banner-text-shoes {
-    margin-top: -93px; }
-  .banner-wrapper .banner .banner-text-bags {
-    margin-top: -263px;
-    margin-left: 40px;
-    text-align: left; }
-  .banner-wrapper .banner .banner-text-collection {
-    margin-top: -213px;
-    margin-left: 360px; }
-  .banner-wrapper .banner .banner-text-women {
-    margin-top: -383px; }
+    .banner-wrapper .banner-wrap-left .banner {
+      height: 300px; }
+  .banner-wrapper .banner {
+    overflow: hidden;
+    height: 620px;
+    margin-top: 17px;
+    border-radius: 5px;
+    letter-spacing: 1px; }
+    .banner-wrapper .banner:first-child {
+      margin-right: 20px; }
+    .banner-wrapper .banner.last {
+      margin-top: 20px; }
+    .banner-wrapper .banner [class*="banner-text-"] {
+      text-align: center;
+      line-height: 1.24; }
+      .banner-wrapper .banner [class*="banner-text-"] strong {
+        font-size: 30px;
+        font-weight: 700;
+        text-transform: uppercase; }
+      .banner-wrapper .banner [class*="banner-text-"] em {
+        font-size: 15px;
+        font-family: 'PT Serif', serif;
+        color: #5b5d69;
+        font-style: italic; }
+      .banner-wrapper .banner [class*="banner-text-"] button {
+        margin-top: 10px; }
+    .banner-wrapper .banner .banner-text-shoes {
+      margin-top: -93px; }
+    .banner-wrapper .banner .banner-text-bags {
+      margin-top: -263px;
+      margin-left: 40px;
+      text-align: left; }
+    .banner-wrapper .banner .banner-text-collection {
+      margin-top: -213px;
+      margin-left: 360px; }
+    .banner-wrapper .banner .banner-text-women {
+      margin-top: -383px; }
 
 .tabs {
   padding: 3px 0;
@@ -580,7 +581,7 @@ h4 {
         line-height: 2;
         color: #969ea3;
         font-size: 11px; }
-        .footer .footer-top .footer-nav dl dd a:hover {
+        .footer .footer-top .footer-nav dl dd a:hover, .footer .footer-top .footer-nav dl dd a:focus {
           color: #e36556; }
     .footer .footer-top .contact-us {
       float: right; }
@@ -625,3 +626,11 @@ h4 {
         display: inline-block;
         font-size: 12px;
         color: #adaeb4; }
+
+.banner-wrapper, .banner, .tabs, .product-wrapper, .products-item, .about-us, .from-the-blog, .blog-items, .footer {
+  opacity: 0;
+  transition: all 0.5s ease-out;
+  transform: translateY(50px); }
+  .banner-wrapper.fade-in, .banner.fade-in, .tabs.fade-in, .product-wrapper.fade-in, .products-item.fade-in, .about-us.fade-in, .from-the-blog.fade-in, .blog-items.fade-in, .footer.fade-in {
+    opacity: 1;
+    transform: translateY(0); }
