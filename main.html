@@ -10,11 +10,11 @@
 	<link rel="stylesheet" href="resources/initialization/reset.css">
 	<link rel="stylesheet" href="css/grid.css">
 	<link rel="stylesheet" href="css/style.css">
-<!-- 	<link rel="stylesheet" href="css/element.css">
-	<link rel="stylesheet" href="css/main.css"> -->
+	<link rel="stylesheet" href="css/font-style.css">
 </head>
-<body class="reset-list">
+<body id="main" class="reset-list">
 	<section class="header">
+	<h4 class="hidden">header</h4>
 		<div class="header-top">
 			<div class="wrapper">
 				<h1 class="logo">
@@ -22,14 +22,14 @@
 						<img src="svg/arbuzz.svg" alt="arbuzz" width="85" height="18">
 					</a>
 				</h1>
-				<div class="customer-tel col-3">
-					<p>24/7 &nbsp;037-2339-9874</p>
+				<div class="customer-tel col-3 ">	
+					<p><span class="icon-support"></span>24/7 &nbsp;037-2339-9874</p>
 				</div>
 				<div class="local-nav col-4">
 					<button type="button" class="change-lang">EN</button>
 					<button type="button" class="change-currency">USD</button>
-					<a href="" class="header-addcart">addcart</a>
-					<a href="" class="header-login">log in</a>
+					<a href="" class="header-addcart icon-addbag" aria-label="go to addcart"></a>
+					<a href="" class="header-login"><span class="icon-login"></span> log in</a>
 				</div>
 				<!-- /local-nav -->
 			</div>
@@ -58,6 +58,7 @@
 	<!-- /header -->
 	<main>
 		<section class="main-carousel">
+		<h4 class="hidden">main carousel aria</h4>
 			<div class="carousel-container wrapper">
 				<ul>
 					<li class="wrapper">
@@ -105,6 +106,7 @@
 		<!-- /main-carousel -->
 		<div class="wrapper">
 			<section class="banner-wrapper">
+			<h4 class="hidden">banner aria</h4>
 				<div class="banner-wrap-left col-8">
 					<div class="banner col-4">
 						<img src="img/banner-shoe.jpg" alt="shoes">
@@ -140,6 +142,7 @@
 			</section>
 			<!-- /banner-wrapper -->
 			<article class="tabs">
+			<h4 class="hidden">product tab aria</h4>
 				<ul>
 					<li class="tab-menu-list"><a href="">featured products</a></li>
 					<li class="tab-menu-list">
@@ -150,6 +153,7 @@
 			</article>
 			<!-- /tabs -->
 			<section class="product-wrapper">
+			<h4 class="hidden">product item aria</h4>
 				<article class="products-item col-3">
 					<img src="img/product1.jpg" alt="" height="319">
 					<div class="products-caption">
@@ -159,10 +163,9 @@
 					</div>
 					<span class="label-new">NEW</span>
 					<div class="add-buttons">
-						<button class="add-cart">
-							add to cart
+						<button class="add-cart icon-addbag" aria-label="add to cart">
 						</button>
-						<button class="add-wish">add to wishlist</button>
+						<button class="add-wish icon-heart" aria-label="add to wishlist"></button>
 					</div>
 				</article>
 				<article class="products-item col-3">
@@ -175,10 +178,9 @@
 					</div>
 					<span class="label-hit">HIT</span>
 					<div class="add-buttons">
-						<button class="add-cart">
-							add to cart
+						<button class="add-cart icon-addbag" aria-label="add to cart">
 						</button>
-						<button class="add-wish">add to wishlist</button>
+						<button class="add-wish icon-heart" aria-label="add to wishlist"></button>
 					</div>
 				</article>
 				<article class="products-item col-3">
@@ -189,10 +191,9 @@
 						</p>
 					</div>
 					<div class="add-buttons">
-						<button class="add-cart">
-							add to cart
+						<button class="add-cart icon-addbag" aria-label="add to cart">
 						</button>
-						<button class="add-wish">add to wishlist</button>
+						<button class="add-wish icon-heart" aria-label="add to wishlist"></button>
 					</div>
 				</article>
 				<article class="products-item col-3">
@@ -204,15 +205,15 @@
 					</div>
 					<span class="label-sale">SALE 30%</span>
 					<div class="add-buttons">
-						<button class="add-cart">
-							add to cart
+						<button class="add-cart icon-addbag" aria-label="add to cart">
 						</button>
-						<button class="add-wish">add to wishlist</button>
+						<button class="add-wish icon-heart" aria-label="add to wishlist"></button>
 					</div>
 				</article>
 			</section>
 			<!-- /product-wrapper -->
 			<section class="about-us">
+			<h4 class="hidden">about us aria</h4>
 				<h2>about us</h2>
 				<p class="main-paragragh">
 					Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
@@ -221,8 +222,10 @@
 			</section>
 			<!-- /about-us -->
 			<section class="from-the-blog">
+			<h4 class="hidden">from the blog aria</h4>
 				<h2>from the blog</h2>
 				<article class="tabs">
+				<h4 class="hidden">product tab aria</h4>
 					<ul>
 						<li class="tab-menu-list"><a href="">last articles</a></li>
 						<li class="tab-menu-list">
@@ -241,7 +244,7 @@
 								Robotics designers should model robots based on those in films if they want the public to interact 
 							</p>
 						</div>
-						<div class="times">5 minutes ago</div>
+						<div class="times"><span class="icon-time"></span> 5 minutes ago</div>
 					</a>
 					<a href="" class="blog-items col-4">
 						<div class="inner-wrapper">
@@ -251,7 +254,7 @@
 								We sort of want to see the receipts though.
 							</p>
 						</div>
-						<div class="comments">43</div>
+						<div class="comments"><span class="icon-comment"></span> 43</div>
 					</a>
 					<a href="" class="blog-items another col-4">
 						<div class="inner-wrapper">
@@ -271,11 +274,12 @@
 	</main>
 	<!-- /main -->
 	<section class="footer">
+	<h4 class="hidden">footer</h4>
 		<div class="footer-top">
 				<div class="wrapper">
 					<nav class="footer-nav col-6">
 						<dl class="col-2">
-							<dt><h4>men</h4></dt>
+							<dt class="footer-heading">men</dt>
 							<dd>
 								<a href="">Jeans</a>
 							</dd>
@@ -299,7 +303,7 @@
 							</dd>
 						</dl>
 						<dl class="col-2">
-							<dt><h4>women</h4></dt>
+							<dt class="footer-heading">women</dt>
 							<dd>
 								<a href="">Dresses</a>
 							</dd>
@@ -323,7 +327,7 @@
 							</dd>
 						</dl>
 						<dl class="col-2">
-							<dt><h4>kids</h4></dt>
+							<dt class="footer-heading">kids</dt>
 							<dd>
 								<a href="">Shirts</a>
 							</dd>
@@ -349,23 +353,49 @@
 					</nav>
 					<!-- /.footer-nav -->
 					<div class="contact-us col-5">
-						<h4>follow us</h4>
+						<h4 class="footer-heading">follow us</h4>
 						<ul class="sns-list-wrapper">
-							<li><a href="" class="sns-round-twitter">twitter</a>				
+							<li>
+							<a href="" class="sns-round-twitter">
+								<span class="icon-twitter">
+									<span class="path1"></span>
+									<span class="path2"></span>
+								</span>
+							</a>				
 							</li>
-							<li><a href="" class="sns-round-facebook">facebook</a></li>
-							<li><a href="" class="sns-round-insta">instagram</a></li>
-							<li><a href="" class="sns-round-dribbble">dribbble</a></li>
-							<li><a href="" class="sns-round-behance">behance</a></li>
+							<li><a href="" class="sns-round-facebook" aria-label="facebook">
+								<span class="icon-facebook">
+									<span class="path1"></span>
+									<span class="path2"></span>
+								</span>
+							</a></li>
+							<li><a href="" class="sns-round-insta" aria-label="instagram">
+								<span class="icon-instagram">
+									<span class="path1"></span>
+									<span class="path2"></span>
+								</span>
+							</a></li>
+							<li><a href="" class="sns-round-dribbble" aria-label="dribbble">
+								<span class="icon-dribbble">
+									<span class="path1"></span>
+									<span class="path2"></span>
+								</span>
+							</a></li>
+							<li><a href="" class="sns-round-behance" aria-label="behance">
+								<span class="icon-behance">
+									<span class="path1"></span>
+									<span class="path2"></span>
+								</span>
+							</a></li>
 						</ul>
 						<!-- /sns-list-wrapper -->
-						<h4>subscribe us</h4>
+						<h4 class="footer-heading">subscribe us</h4>
 						<form action="#">
 							<fieldset class="subscribe-us">
 								<label for="email">
 								<input id="email" type="text" class="box-input" placeholder="E-MAIL">
 								</label>
-								<button type="submit" class="submit-btn"></button>
+								<button type="submit" class="submit-btn icon-right-arrow" aria-label="submit button"></button>
 							</fieldset>
 						</form>
 					</div>

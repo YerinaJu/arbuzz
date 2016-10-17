@@ -7,7 +7,9 @@ $black: #3c3d48
 $white: #fff
 $bg-color: #e5e5e5
 
-
+::selection
+    color: $white
+    background: $black
 // mixin
 =size($w, $h: $w)
     width: $w
@@ -52,7 +54,11 @@ a
     text-decoration: none
     color: inherit
 img
-    vertical-align: middle
+    vertical-align: bottom
+
+.hidden
+    @extend %text-hidden
+    +size(0px)
 
 .wrapper
     @extend %wrapper
@@ -61,7 +67,7 @@ img
     background-color: $white
 .header-top
     position: relative
-    padding: 40px 0 38px
+    padding: 40px 0
     border-bottom: 1px solid $bg-color
     font-size: 11px
     letter-spacing: 2px
@@ -73,15 +79,16 @@ img
         a 
             padding: 10px
             height: 18px
-.customer-tel
-    padding: 
-        left: 26px
-    background: url("../svg/icon/support.svg") no-repeat 0
-    p 
+.customer-tel p     
         line-height: 1.7
+        span
+            display: inline-block
+            margin-right: 5px
+            font-size: 16px
+            vertical-align: middle
 .local-nav
     float: right
-    margin-top: -5px
+    margin-top: -7px
     text-align: right
     button[class*="change-"]
         font: inherit
@@ -89,19 +96,22 @@ img
         letter-spacing: inherit
         background: url("../img/select-red.png") no-repeat right
     .header-addcart
-        @extend %text-hidden
+        // @extend %text-hidden
         display: inline-block
         padding: 10px
+            left: 15px
         +size(12px, 16px)
-        background: url("../svg/icon/addbag.svg") no-repeat 10px 7px
-        vertical-align: top
+        vertical-align: middle
+        font-size: 14px
     .header-login
         display: inline-block
-        padding: 10px 10px 10px 22px
-        background: url("../svg/icon/login.svg") no-repeat
-            position: 0 7px
         color: $default
         text-transform: uppercase
+        .icon-login
+            display: inline-block
+            color: $black
+            font-size: 14px
+            vertical-align: bottom
 .header-bottom
     padding: 20px 0 19px
 
@@ -282,14 +292,14 @@ img
             button[class*="add-"]
                 +size(43px)
                 vertical-align: top
-                @extend %text-hidden
+                color: $white
+                font-size: 18px
             .add-cart
-                background: url("../svg/icon/addbag.svg") no-repeat center
                 background-color: $primary
                 border-radius: 3px 0 0 3px
+
             .add-wish
                 margin-left: -4px
-                background: url("../svg/icon/heart.svg") no-repeat center
                 background-color: lighten($primary, 6)
                 border-radius: 0 3px 3px 0
             &::before
@@ -330,6 +340,7 @@ img
         right: 60px
         bottom: 40px
     background-color: $white
+    border-radius: 5px
     .default-btn
         margin-left: 50%
         margin-top: 30px
@@ -392,16 +403,18 @@ img
             .times, .comments
                 margin:
                     left: 30px
-                    top: 25px
-                padding:
-                    left: 27px  
-                    top: 5px   
-                height: 28px               
+                    top: 20px  
+                height: 28px        
             .times
-                background: url("../svg/icon/time.svg") no-repeat
                 color: #adaeb4
-            .comments
-                background: url("../svg/icon/comment.svg") no-repeat
+                .icon-time
+                    font-size: 16px
+                    margin-right: 9px
+                    vertical-align: middle    
+            .icon-comment
+                font-size: 16px
+                margin-right: 9px
+                vertical-align: middle    
             .writer
                 height: 53px
                 padding:
@@ -412,15 +425,16 @@ img
                 font-weight: bold
                 img 
                     margin-right: 10px
-h4
-    text-transform: uppercase
-    font-weight: bold
-    letter-spacing: 2px
-    font-size: 11px
+                    vertical-align: middle
 
 .footer
     margin-top: 20px
     background-color: $white
+    .footer-heading
+        text-transform: uppercase
+        font-weight: bold
+        letter-spacing: 2px
+        font-size: 11px
     .footer-top
         padding-top: 50px
         .footer-nav dl
@@ -445,22 +459,34 @@ h4
                 li
                     float: left
                     margin-right: 10px
+
+                    a[class*="sns-round"]
+                        display: inline-block
+                        +size(26px)
+                        // @extend %text-hidden              
+                        font-size: 26px
+                        .path2::before
+                            display: block
+                            margin:
+                                top: -15px
+                                left: 0
+                            line-height: 0
+                            // margin:  
+                            //     top: -30px
+                            //     left: 0
+
             .subscribe-us
                 margin-top: 20px
                 position: relative
                 .submit-btn
                     position: absolute
                     right: 20px
-                    top: 0
+                    top: 1px
                     +size(45px)
                     background-color: $primary
                     border-radius: 0 3px 3px 0
                     &::before
-                        display: block
-                        +size(8px, 13px)
-                        content: ''
-                        background: url("../svg/button/right-arrow.svg") no-repeat
-                        margin-left: 50%
+                        color: $white
                         transform: translateX(-50%)
     .footer-bottom
         border-top: 1px solid $bg-color
@@ -472,7 +498,6 @@ h4
             li
                 float: left
                 margin-right: 28px
-
         .copyright
             float: right
             h1
@@ -482,13 +507,33 @@ h4
                 display: inline-block
                 font-size: 12px
                 color: #adaeb4
+                
+#main
+    .banner-wrapper, .banner, .tabs, .product-wrapper, .products-item, .about-us, .from-the-blog, .blog-items, .footer
+        opacity: 0
+        transition: all 0.5s ease-out
+        transform: translateY(50px)
+        &.fade-in
+            opacity: 1
+            transform: translateY(0)
 
-
-
-.banner-wrapper, .banner, .tabs, .product-wrapper, .products-item, .about-us, .from-the-blog, .blog-items, .footer
-    opacity: 0
-    transition: all 0.5s ease-out
-    transform: translateY(50px)
-    &.fade-in
-        opacity: 1
-        transform: translateY(0)
+//sub_catalog
+// #catalog
+//     .hamburger-menu
+//         background: url("../svg/icon/menu.svg") no-repeat 0
+//         padding: 5px 0 5px 34px
+//     .main-menu-wrapper
+//         margin-left: 120px
+//         text-align: center
+//     .header-search
+//         display: inline-block
+//         @extend %text-hidden
+//         padding: 5px
+//         +size(16px)
+//         background: url("../svg/icon/search.svg") no-repeat 0
+//         vertical-align: top
+//     .header-login
+//         @extend %text-hidden
+//         +size(18px)
+//     .banner-wrapper
+//         background-color: $bg-color
